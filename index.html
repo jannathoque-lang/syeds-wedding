@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Syed's Wedding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #f8f5f2;
+      text-align: center;
+      color: #333;
+    }
+    .container {
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 32px;
+      color: #7a1f2b;
+    }
+    h2 {
+      margin-top: 10px;
+      font-weight: normal;
+    }
+    .countdown {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+    .box {
+      background: white;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Bismillah ir-Rahman ir-Rahim</h1>
+  <h2>Welcome to Syed’s Wedding</h2>
+
+  <h1>Syed Rakibul Hoque<br>&<br>Minshana Muneer</h1>
+
+  <div class="countdown" id="countdown"></div>
+
+  <div class="box">
+    <h2>Wedding Ceremony</h2>
+    <p>Sunday, 28th June 2026</p>
+    <p>6:00 PM</p>
+    <p>Imperial Banqueting<br>619 High Road, London</p>
+  </div>
+
+  <div class="box">
+    <p><em>“And We created you in pairs.”</em></p>
+    <p>— Qur’an 78:8</p>
+  </div>
+
+  <div class="box">
+    <p>RSVP: 07456 878912</p>
+  </div>
+</div>
+
+<script>
+  const countdown = document.getElementById("countdown");
+  const weddingDate = new Date("June 28, 2026 18:00:00").getTime();
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = weddingDate - now;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    countdown.innerHTML = days + " days to go 💍";
+  }, 1000);
+</script>
+
+</body>
+</html>
