@@ -3,70 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Syed’s Wedding</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-
-  background: linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)),
+  background: linear-gradient(rgba(255,255,255,0.28), rgba(255,255,255,0.28)),
               url('AF4BEE5E-BE90-47C1-A640-6523658D66D4.png');
-
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;
-
-  color: #2b1b1f;
+  color: #1f1a17;
   text-align: center;
 }
 
-/* PAGE 1 */
-.hero {
+/* SECTIONS */
+.hero, .details {
   min-height: 100vh;
+  padding: 28px 18px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px 20px;
 }
 
 /* BISMILLAH */
 .bismillah img {
-  width: 220px;
-  margin-bottom: 20px;
+  width: 240px;
+  max-width: 85%;
+  margin-bottom: 18px;
   mix-blend-mode: multiply;
 }
 
-/* PARENTS TEXT (GOLD) */
+/* PARENTS */
 .parents {
+  max-width: 320px;
   font-size: 12px;
+  line-height: 1.6;
   color: #c9a24a;
-  max-width: 300px;
-  margin-bottom: 15px;
-  line-height: 1.5;
+  margin-bottom: 14px;
 }
 
 /* NAMES */
 .names {
   font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  color: black;
-  margin: 12px 0;
+  font-size: 34px;
+  line-height: 1.25;
+  color: #000;
 }
 
 .amp {
+  font-family: 'Great Vibes', cursive;
   color: #c9a24a;
-  font-size: 28px;
+  font-size: 34px;
 }
 
-/* BRIDE SUBTEXT */
 .subtext {
+  display: block;
   font-size: 11px;
-  margin-top: 5px;
+  margin-top: 6px;
   color: #c9a24a;
 }
 
@@ -75,62 +77,90 @@ body {
   font-size: 12px;
   letter-spacing: 2px;
   color: #1f6b57;
-  margin-top: 15px;
+  margin-top: 14px;
 }
 
 /* COUNTDOWN */
 .countdown {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   margin-top: 20px;
 }
 
 .time-box span {
-  font-size: 22px;
-  font-weight: bold;
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .time-box small {
   font-size: 9px;
 }
 
-/* BUTTON */
-.btn {
-  margin-top: 25px;
-  padding: 10px 20px;
-  border-radius: 30px;
-  background: linear-gradient(45deg, #7a2d2d, #1f6b57);
-  color: white;
-  text-decoration: none;
-  font-size: 13px;
+/* 71A36E78-F5D4-4E6C-95CF-B7474A7DF952.png ANIMATION */
+.71A36E78-F5D4-4E6C-95CF-B7474A7DF952.png {
+  width: 190px;
+  max-width: 70%;
+  margin-top: 18px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 2s ease forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* PAGE 2 */
-.details {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 30px 20px;
-}
-
 .details h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .details p {
   margin: 6px 0;
 }
 
+.btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 11px 22px;
+  border-radius: 30px;
+  background: #c9a24a;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+}
+
 .quote {
-  margin-top: 20px;
+  margin-top: 28px;
   font-style: italic;
 }
 
-/* SCROLL */
-html {
-  scroll-behavior: smooth;
+.rsvp-title {
+  margin-top: 26px;
+  color: #c9a24a;
+  font-size: 12px;
+}
+
+.gold-link {
+  color: #c9a24a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  body { background-attachment: scroll; }
+
+  .bismillah img { width: 220px; }
+  .names { font-size: 30px; }
+  .amp { font-size: 30px; }
+  .71A36E78-F5D4-4E6C-95CF-B7474A7DF952.png { width: 170px; }
 }
 </style>
 </head>
@@ -151,7 +181,7 @@ html {
   <div class="names">
     Syed Rakibul Hoque<br>
     <span class="amp">&</span><br>
-    Minshana Muneer<br>
+    Minshana Muneer
     <span class="subtext">Daughter of Mr. and Mrs. Muneer</span>
   </div>
 
@@ -164,12 +194,12 @@ html {
     <div class="time-box"><span id="seconds"></span><small>SECONDS</small></div>
   </div>
 
-  <a href="#details" class="btn">View Invitation</a>
+  <img class="71A36E78-F5D4-4E6C-95CF-B7474A7DF952.png" src="71A36E78-F5D4-4E6C-95CF-B7474A7DF952.png">
 
 </section>
 
 <!-- PAGE 2 -->
-<section id="details" class="details">
+<section class="details">
 
   <h2>Wedding Ceremony</h2>
   <p><strong>Imperial Banqueting</strong></p>
@@ -177,23 +207,26 @@ html {
   <p>Sunday, 28th June 2026</p>
   <p>6:00 PM</p>
 
+  <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Imperial+Banqueting+619+High+Road+E11+4PA" target="_blank">
+    Open Map
+  </a>
+
   <div class="quote">
     “And We created you in pairs.”<br>
     — Qur’an 78:8
   </div>
 
-  <br>
-
-  <a class="btn" href="tel:07456878912">RSVP</a>
+  <div class="rsvp-title">RSVP</div>
+  <a class="gold-link" href="tel:07456878912">07456 878912</a>
 
 </section>
 
 <script>
-const date = new Date("June 28, 2026 18:00:00").getTime();
+const weddingDate = new Date("June 28, 2026 18:00:00").getTime();
 
 setInterval(() => {
   const now = new Date().getTime();
-  const diff = date - now;
+  const diff = weddingDate - now;
 
   document.getElementById("days").innerText = Math.floor(diff / (1000*60*60*24));
   document.getElementById("hours").innerText = Math.floor((diff/(1000*60*60))%24);
