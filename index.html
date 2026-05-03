@@ -21,17 +21,24 @@ body {
   text-align: center;
 }
 
+/* main invitation */
 .hero {
   min-height: 100vh;
-  padding: 55px 18px 30px;
+  padding: 130px 18px 40px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
 }
 
+/* keeps text away from flowers */
+.hero-inner {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
 .bismillah img {
-  width: 235px;
+  width: 230px;
   max-width: 86%;
   margin-bottom: 18px;
   mix-blend-mode: multiply;
@@ -43,7 +50,6 @@ body {
   letter-spacing: 1.3px;
   line-height: 1.75;
   text-transform: uppercase;
-  max-width: 340px;
   margin: 0 auto 12px;
 }
 
@@ -107,7 +113,7 @@ body {
 }
 
 .couple-img {
-  width: 165px;
+  width: 155px;
   max-width: 70%;
   margin-top: 18px;
   opacity: 0;
@@ -123,9 +129,10 @@ body {
   }
 }
 
+/* details */
 .details {
   min-height: 100vh;
-  padding: 170px 20px 90px;
+  padding: 120px 20px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -162,42 +169,108 @@ body {
   line-height: 1.6;
 }
 
-.rsvp {
-  margin-top: 24px;
-  color: #a7832f;
-  letter-spacing: 1px;
+/* RSVP section like your reference */
+.rsvp-section {
+  min-height: 100vh;
+  padding: 90px 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.rsvp a {
+.rsvp-card {
+  width: 100%;
+  max-width: 430px;
+  background: rgba(255, 250, 242, 0.88);
+  border: 1px solid rgba(167, 131, 47, 0.25);
+  padding: 42px 30px;
+  box-shadow: 0 8px 25px rgba(90, 62, 43, 0.12);
+}
+
+.rsvp-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  letter-spacing: 5px;
+  font-weight: 400;
+  margin: 0 0 10px;
+}
+
+.rsvp-card .small-title {
   color: #a7832f;
-  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+.rsvp-field {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.rsvp-field label {
+  display: block;
+  color: #8b6b35;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.rsvp-line {
+  border-bottom: 1px solid rgba(167, 131, 47, 0.45);
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+.rsvp-button {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  padding: 14px;
+  background: #a7832f;
+  color: white;
   text-decoration: none;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
 @media (max-width: 600px) {
-  .hero {
-    padding-top: 55px;
+  body {
+    background-position: center top;
   }
 
-  .details {
-    padding-top: 185px;
+  .hero {
+    padding-top: 155px;
+  }
+
+  .hero-inner {
+    max-width: 320px;
   }
 
   .bismillah img {
-    width: 220px;
+    width: 215px;
   }
 
   .invite-text {
-    font-size: 11px;
-    max-width: 310px;
+    font-size: 10.5px;
   }
 
   .script-name {
-    font-size: 42px;
+    font-size: 40px;
   }
 
   .couple-img {
-    width: 155px;
+    width: 145px;
+  }
+
+  .details {
+    padding-top: 130px;
+  }
+
+  .rsvp-card {
+    padding: 38px 24px;
   }
 }
 </style>
@@ -206,37 +279,41 @@ body {
 <body>
 
 <section class="hero">
-  <div class="bismillah">
-    <img src="IMG_1467.jpeg" alt="Bismillah">
+  <div class="hero-inner">
+
+    <div class="bismillah">
+      <img src="IMG_1467.jpeg" alt="Bismillah">
+    </div>
+
+    <div class="invite-text">
+      Mr. Syed B Hoque and Mrs. Fatima Rahman<br>
+      request the honour of your presence<br>
+      at the marriage of their eldest son
+    </div>
+
+    <div class="script-name">Syed Rakibul Hoque</div>
+    <div class="divider">— ✦ —</div>
+    <div class="and">and</div>
+    <div class="script-name">Minshana Muneer</div>
+
+    <div class="bride-info">Daughter of Mr. and Mrs. Muneer</div>
+    <div class="divider">— ✦ —</div>
+
+    <div class="date">
+      Sunday, 28th June 2026<br>
+      at 6PM
+    </div>
+
+    <div class="countdown">
+      <div class="time-box"><span id="days">0</span><small>Days</small></div>
+      <div class="time-box"><span id="hours">0</span><small>Hours</small></div>
+      <div class="time-box"><span id="minutes">0</span><small>Minutes</small></div>
+      <div class="time-box"><span id="seconds">0</span><small>Seconds</small></div>
+    </div>
+
+    <img src="IMG_1503.png" class="couple-img" alt="Bride and Groom">
+
   </div>
-
-  <div class="invite-text">
-    Mr. Syed B Hoque and Mrs. Fatima Rahman<br>
-    request the honour of your presence<br>
-    at the marriage of their eldest son
-  </div>
-
-  <div class="script-name">Syed Rakibul Hoque</div>
-  <div class="divider">— ✦ —</div>
-  <div class="and">and</div>
-  <div class="script-name">Minshana Muneer</div>
-
-  <div class="bride-info">Daughter of Mr. and Mrs. Muneer</div>
-  <div class="divider">— ✦ —</div>
-
-  <div class="date">
-    Sunday, 28th June 2026<br>
-    at 6PM
-  </div>
-
-  <div class="countdown">
-    <div class="time-box"><span id="days">0</span><small>Days</small></div>
-    <div class="time-box"><span id="hours">0</span><small>Hours</small></div>
-    <div class="time-box"><span id="minutes">0</span><small>Minutes</small></div>
-    <div class="time-box"><span id="seconds">0</span><small>Seconds</small></div>
-  </div>
-
-  <img src="IMG_1503.png" class="couple-img" alt="Bride and Groom">
 </section>
 
 <section class="details">
@@ -254,10 +331,33 @@ body {
     “And We created you in pairs.”<br>
     — Qur’an 78:8
   </div>
+</section>
 
-  <div class="rsvp">
-    RSVP<br>
-    <a href="tel:07456878912">07456 878912</a>
+<section class="rsvp-section">
+  <div class="rsvp-card">
+    <h2>RSVP</h2>
+    <div class="small-title">Kindly respond as soon as possible</div>
+
+    <div class="rsvp-field">
+      <label>Full Name</label>
+      <div class="rsvp-line">________________________</div>
+    </div>
+
+    <div class="rsvp-field">
+      <label>Will you attend?</label>
+      <div class="rsvp-line">Please message your response</div>
+    </div>
+
+    <div class="rsvp-field">
+      <label>Family Members</label>
+      <div class="rsvp-line">Please include number of guests</div>
+    </div>
+
+    <a class="rsvp-button" href="tel:07456878912">Call RSVP</a>
+    <br>
+    <a class="gold-link" href="tel:07456878912" style="color:#a7832f; text-decoration:none; font-weight:600;">
+      07456 878912
+    </a>
   </div>
 </section>
 
