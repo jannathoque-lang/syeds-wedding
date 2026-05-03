@@ -5,136 +5,114 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Syed’s Wedding</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background: url('BF79E16A-B519-437C-AD38-4201BCEE67F1.png');
+  background: url('BF79E16A-B519-437C-AD38-4201BCEE67F1.png') no-repeat center top;
   background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
   color: #2b1b1f;
   text-align: center;
 }
 
-.hero,
-.details {
+.hero {
   min-height: 100vh;
-  padding: 28px 18px;
+  padding: 55px 18px 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
-/* Bismillah */
 .bismillah img {
-  width: 245px;
-  max-width: 88%;
-  margin-bottom: 16px;
+  width: 235px;
+  max-width: 86%;
+  margin-bottom: 18px;
   mix-blend-mode: multiply;
 }
 
-/* Invitation wording */
 .invite-text {
   font-family: 'Playfair Display', serif;
-  font-size: 13px;
-  letter-spacing: 1.4px;
-  line-height: 1.8;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  line-height: 1.75;
   text-transform: uppercase;
-  color: #2b1b1f;
-  margin: 10px 0 14px;
-  max-width: 360px;
+  max-width: 340px;
+  margin: 0 auto 12px;
 }
 
 .script-name {
   font-family: 'Great Vibes', cursive;
-  font-size: 50px;
+  font-size: 46px;
   color: #a7832f;
   line-height: 1.05;
-  margin: 6px 0;
-}
-
-.and {
-  font-family: 'Playfair Display', serif;
-  font-size: 17px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: #a7832f;
-  margin: 2px 0;
-}
-
-.bride-info {
-  font-family: 'Playfair Display', serif;
-  font-size: 13px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #2b1b1f;
-  margin-top: 8px;
+  margin: 4px 0;
 }
 
 .divider {
   color: #a7832f;
+  font-size: 15px;
+  margin: 8px 0;
+}
+
+.and {
+  font-family: 'Playfair Display', serif;
   font-size: 16px;
-  margin: 9px 0;
+  color: #a7832f;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.bride-info {
+  font-family: 'Playfair Display', serif;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-top: 7px;
 }
 
 .date {
   font-family: 'Playfair Display', serif;
-  font-size: 17px;
-  letter-spacing: 1.8px;
+  font-size: 15px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #2b1b1f;
-  line-height: 1.7;
-  margin-top: 10px;
+  line-height: 1.6;
+  margin-top: 8px;
 }
 
-/* Countdown */
 .countdown {
   display: flex;
   gap: 9px;
   justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 18px;
-}
-
-.time-box {
-  min-width: 48px;
+  margin-top: 17px;
 }
 
 .time-box span {
   display: block;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
-  color: #2b1b1f;
 }
 
 .time-box small {
   display: block;
   font-size: 9px;
-  letter-spacing: 1px;
   color: #6a4a32;
   text-transform: uppercase;
 }
 
-/* Couple image with animation */
 .couple-img {
-  width: 185px;
+  width: 165px;
   max-width: 70%;
   margin-top: 18px;
   opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 1.6s ease forwards;
+  transform: translateY(28px);
+  animation: fadeUp 1.5s ease forwards;
   animation-delay: 1s;
 }
 
@@ -145,63 +123,64 @@ body {
   }
 }
 
-/* Details section */
+.details {
+  min-height: 100vh;
+  padding: 170px 20px 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .details h2 {
   font-family: 'Great Vibes', cursive;
-  font-size: 42px;
   color: #a7832f;
-  margin: 0 0 14px;
+  font-size: 42px;
+  margin: 0 0 12px;
 }
 
 .details p {
-  margin: 6px 0;
+  margin: 5px 0;
   font-size: 14px;
 }
 
 .btn {
-  display: inline-block;
   margin-top: 16px;
-  padding: 11px 24px;
+  padding: 10px 24px;
   border-radius: 999px;
   background: #a7832f;
   color: white;
   text-decoration: none;
   font-size: 13px;
-  font-weight: 500;
+  display: inline-block;
 }
 
 .quote {
-  margin-top: 28px;
+  margin-top: 26px;
   font-family: 'Playfair Display', serif;
-  font-size: 18px;
   font-style: italic;
-  color: #5a3e2b;
+  font-size: 16px;
   line-height: 1.6;
 }
 
-.rsvp-title {
-  margin-top: 28px;
+.rsvp {
+  margin-top: 24px;
   color: #a7832f;
-  letter-spacing: 2px;
-  font-size: 12px;
-  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.gold-link {
+.rsvp a {
   color: #a7832f;
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
 }
 
-/* Phone optimisation */
 @media (max-width: 600px) {
-  body {
-    background-position: center top;
+  .hero {
+    padding-top: 55px;
   }
 
-  .hero,
   .details {
-    padding: 24px 16px;
+    padding-top: 185px;
   }
 
   .bismillah img {
@@ -211,23 +190,14 @@ body {
   .invite-text {
     font-size: 11px;
     max-width: 310px;
-    letter-spacing: 1.2px;
   }
 
   .script-name {
-    font-size: 44px;
-  }
-
-  .bride-info {
-    font-size: 11px;
-  }
-
-  .date {
-    font-size: 15px;
+    font-size: 42px;
   }
 
   .couple-img {
-    width: 165px;
+    width: 155px;
   }
 }
 </style>
@@ -236,7 +206,6 @@ body {
 <body>
 
 <section class="hero">
-
   <div class="bismillah">
     <img src="IMG_1467.jpeg" alt="Bismillah">
   </div>
@@ -248,17 +217,11 @@ body {
   </div>
 
   <div class="script-name">Syed Rakibul Hoque</div>
-
   <div class="divider">— ✦ —</div>
-
   <div class="and">and</div>
-
   <div class="script-name">Minshana Muneer</div>
 
-  <div class="bride-info">
-    Daughter of Mr. and Mrs. Muneer
-  </div>
-
+  <div class="bride-info">Daughter of Mr. and Mrs. Muneer</div>
   <div class="divider">— ✦ —</div>
 
   <div class="date">
@@ -273,12 +236,10 @@ body {
     <div class="time-box"><span id="seconds">0</span><small>Seconds</small></div>
   </div>
 
-  <img class="couple-img" src="IMG_1503.png" alt="Bride and Groom">
-
+  <img src="IMG_1503.png" class="couple-img" alt="Bride and Groom">
 </section>
 
 <section class="details">
-
   <h2>Wedding Ceremony</h2>
 
   <p><strong>The Imperial Venue</strong></p>
@@ -287,18 +248,17 @@ body {
   <p>Sunday, 28th June 2026</p>
   <p>6:00 PM</p>
 
-  <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Imperial+Banqueting+619+High+Road+E11+4PA" target="_blank">
-    Open Map
-  </a>
+  <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Imperial+Banqueting+619+High+Road+E11+4PA" target="_blank">Open Map</a>
 
   <div class="quote">
     “And We created you in pairs.”<br>
     — Qur’an 78:8
   </div>
 
-  <div class="rsvp-title">RSVP</div>
-  <a class="gold-link" href="tel:07456878912">07456 878912</a>
-
+  <div class="rsvp">
+    RSVP<br>
+    <a href="tel:07456878912">07456 878912</a>
+  </div>
 </section>
 
 <script>
@@ -313,17 +273,10 @@ function updateCountdown() {
     return;
   }
 
-  document.getElementById("days").innerText =
-    Math.floor(distance / (1000 * 60 * 60 * 24));
-
-  document.getElementById("hours").innerText =
-    Math.floor((distance / (1000 * 60 * 60)) % 24);
-
-  document.getElementById("minutes").innerText =
-    Math.floor((distance / (1000 * 60)) % 60);
-
-  document.getElementById("seconds").innerText =
-    Math.floor((distance / 1000) % 60);
+  document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+  document.getElementById("hours").innerText = Math.floor((distance / (1000 * 60 * 60)) % 24);
+  document.getElementById("minutes").innerText = Math.floor((distance / (1000 * 60)) % 60);
+  document.getElementById("seconds").innerText = Math.floor((distance / 1000) % 60);
 }
 
 updateCountdown();
