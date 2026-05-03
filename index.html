@@ -3,31 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Syed’s Wedding</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
 
 <style>
-* { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(rgba(255,255,255,0.28), rgba(255,255,255,0.28)),
-              url('AF4BEE5E-BE90-47C1-A640-6523658D66D4.png');
+  background: url('BF79E16A-B519-437C-AD38-4201BCEE67F1.png');
   background-size: cover;
-  background-position: center top;
-  background-attachment: fixed;
-  color: #1f1a17;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
+  color: #2b1b1f;
 }
 
-/* SECTIONS */
-.hero, .details {
+/* HERO */
+.hero {
   min-height: 100vh;
-  padding: 28px 18px;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,76 +37,78 @@ body {
 
 /* BISMILLAH */
 .bismillah img {
-  width: 240px;
-  max-width: 85%;
-  margin-bottom: 18px;
+  width: 220px;
+  margin-bottom: 10px;
   mix-blend-mode: multiply;
 }
 
-/* PARENTS */
+/* TEXT */
 .parents {
-  max-width: 320px;
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 13px;
   color: #c9a24a;
-  margin-bottom: 14px;
+  margin: 10px 0;
 }
 
-/* NAMES */
+.invite-text {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
 .names {
   font-family: 'Playfair Display', serif;
-  font-size: 34px;
-  line-height: 1.25;
-  color: #000;
+  font-size: 30px;
+  color: black;
 }
 
-.amp {
-  font-family: 'Great Vibes', cursive;
-  color: #c9a24a;
-  font-size: 34px;
-}
-
-.subtext {
-  display: block;
-  font-size: 11px;
-  margin-top: 6px;
+.and {
+  font-size: 24px;
   color: #c9a24a;
 }
 
-/* DATE */
-.date {
+.bride-info {
   font-size: 12px;
-  letter-spacing: 2px;
-  color: #1f6b57;
-  margin-top: 14px;
+  color: #c9a24a;
+  margin-bottom: 15px;
+}
+
+.date {
+  color: #006b4f;
+  font-size: 13px;
+  margin-bottom: 20px;
 }
 
 /* COUNTDOWN */
 .countdown {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.time-box {
+  background: rgba(255,255,255,0.85);
+  padding: 10px;
+  border-radius: 12px;
+  width: 65px;
 }
 
 .time-box span {
-  display: block;
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .time-box small {
-  font-size: 9px;
+  font-size: 10px;
 }
 
-/* 71A36E78-F5D4-4E6C-95CF-B7474A7DF952.png ANIMATION */
-.71A36E78-F5D4-4E6C-95CF-B7474A7DF952.png {
-  width: 190px;
-  max-width: 70%;
-  margin-top: 18px;
+/* COUPLE IMAGE ANIMATION */
+.couple-img {
+  width: 170px;
+  margin-top: 25px;
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 2s ease forwards;
-  animation-delay: 1.2s;
+  transform: translateY(30px);
+  animation: fadeUp 1.5s ease forwards;
+  animation-delay: 1s;
 }
 
 @keyframes fadeUp {
@@ -115,53 +118,33 @@ body {
   }
 }
 
-/* PAGE 2 */
-.details h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-}
-
-.details p {
-  margin: 6px 0;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 14px;
-  padding: 11px 22px;
-  border-radius: 30px;
-  background: #c9a24a;
+/* BUTTON */
+.button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  background: linear-gradient(45deg, #6f1d2b, #006b4f);
   color: white;
-  text-decoration: none;
-  font-size: 13px;
+  display: inline-block;
 }
 
-.quote {
-  margin-top: 28px;
-  font-style: italic;
+/* DETAILS SECTION */
+.details {
+  padding: 40px 20px;
 }
 
-.rsvp-title {
-  margin-top: 26px;
+.card {
+  background: rgba(255,255,255,0.9);
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.gold {
   color: #c9a24a;
-  font-size: 12px;
 }
 
-.gold-link {
-  color: #c9a24a;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-  body { background-attachment: scroll; }
-
-  .bismillah img { width: 220px; }
-  .names { font-size: 30px; }
-  .amp { font-size: 30px; }
-  .71A36E78-F5D4-4E6C-95CF-B7474A7DF952.png { width: 170px; }
-}
 </style>
 </head>
 
@@ -175,63 +158,73 @@ body {
   </div>
 
   <div class="parents">
-    Mr. Syed B Hoque and Mrs. Fatima Rahman request the honour of your presence at the marriage of their eldest son
+    Mr. Syed B Hoque and Mrs. Fatima Rahman
   </div>
 
-  <div class="names">
-    Syed Rakibul Hoque<br>
-    <span class="amp">&</span><br>
-    Minshana Muneer
-    <span class="subtext">Daughter of Mr. and Mrs. Muneer</span>
+  <div class="invite-text">
+    request the honor of your presence at the marriage of their eldest son
   </div>
 
-  <p class="date">Sunday 28th June 2026 • 6:00 PM</p>
+  <div class="names">Syed Rakibul Hoque</div>
+  <div class="and">&</div>
+  <div class="names">Minshana Muneer</div>
+
+  <div class="bride-info">
+    daughter of Mr. and Mrs. Muneer
+  </div>
+
+  <div class="date">
+    Sunday 28th June 2026 • 6:00 PM
+  </div>
 
   <div class="countdown">
-    <div class="time-box"><span id="days"></span><small>DAYS</small></div>
-    <div class="time-box"><span id="hours"></span><small>HOURS</small></div>
-    <div class="time-box"><span id="minutes"></span><small>MINUTES</small></div>
-    <div class="time-box"><span id="seconds"></span><small>SECONDS</small></div>
+    <div class="time-box"><span id="days">0</span><small>Days</small></div>
+    <div class="time-box"><span id="hours">0</span><small>Hours</small></div>
+    <div class="time-box"><span id="minutes">0</span><small>Minutes</small></div>
+    <div class="time-box"><span id="seconds">0</span><small>Seconds</small></div>
   </div>
 
-  <img class="71A36E78-F5D4-4E6C-95CF-B7474A7DF952.png" src="71A36E78-F5D4-4E6C-95CF-B7474A7DF952.png">
+  <img src="IMG_1503.png" class="couple-img">
+
+  <a href="#details" class="button">View Details</a>
 
 </section>
 
-<!-- PAGE 2 -->
-<section class="details">
+<!-- PAGE 2 (SCROLL) -->
+<section id="details" class="details">
 
-  <h2>Wedding Ceremony</h2>
-  <p><strong>Imperial Banqueting</strong></p>
-  <p>619 High Road, London, E11 4PA</p>
-  <p>Sunday, 28th June 2026</p>
-  <p>6:00 PM</p>
+  <div class="card">
+    <h2>Wedding Ceremony</h2>
+    <p>Imperial Banqueting</p>
+    <p>619 High Road, London, E11 4PA</p>
 
-  <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Imperial+Banqueting+619+High+Road+E11+4PA" target="_blank">
-    Open Map
-  </a>
-
-  <div class="quote">
-    “And We created you in pairs.”<br>
-    — Qur’an 78:8
+    <a href="https://maps.google.com?q=Imperial+Banqueting+London" class="button">
+      Open Map
+    </a>
   </div>
 
-  <div class="rsvp-title">RSVP</div>
-  <a class="gold-link" href="tel:07456878912">07456 878912</a>
+  <div class="card">
+    <h2>RSVP</h2>
+    <p>Please confirm your attendance</p>
+
+    <a href="tel:+447456878912" class="button">
+      Call to RSVP
+    </a>
+  </div>
 
 </section>
 
 <script>
-const weddingDate = new Date("June 28, 2026 18:00:00").getTime();
+const target = new Date("June 28, 2026 18:00:00").getTime();
 
 setInterval(() => {
   const now = new Date().getTime();
-  const diff = weddingDate - now;
+  const diff = target - now;
 
   document.getElementById("days").innerText = Math.floor(diff / (1000*60*60*24));
-  document.getElementById("hours").innerText = Math.floor((diff/(1000*60*60))%24);
-  document.getElementById("minutes").innerText = Math.floor((diff/(1000*60))%60);
-  document.getElementById("seconds").innerText = Math.floor((diff/1000)%60);
+  document.getElementById("hours").innerText = Math.floor((diff % (1000*60*60*24))/(1000*60*60));
+  document.getElementById("minutes").innerText = Math.floor((diff % (1000*60*60))/(1000*60));
+  document.getElementById("seconds").innerText = Math.floor((diff % (1000*60))/1000);
 }, 1000);
 </script>
 
