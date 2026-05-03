@@ -41,11 +41,14 @@ body {
 
 .hero {
   min-height: 100vh;
-  padding: 50px 22px;
+  padding: 45px 22px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background:
+  align-items: center;   /* keeps everything centred */
+  text-align: center;
+  transform: translateX(40px); /* shifts slightly right */
+}  background:
     linear-gradient(rgba(111,29,43,0.08), rgba(0,107,79,0.05)),
     var(--cream);
 }
