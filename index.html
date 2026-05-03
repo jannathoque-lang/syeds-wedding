@@ -1,176 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Syed’s Wedding</title>
 
-<style>@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap');  .bismillah {
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;}
-
-.bismillah img {
-  width: 380px;
-  max-width: 85%;
-  display: block;
-  margin: 0 auto 25px;
-  mix-blend-mode: multiply;
-}:root {
-  --burgundy: #6f1d2b;
-  --gold: #c9a24a;
-  --emerald: #006b4f;
-  --cream: #fbf6ef;
-  --dark: #2b1b1f;
-}
-
-* {
-  box-sizing: border-box;
-}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap');
 
 body {
   margin: 0;
-  background: linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.15)),
+  font-family: 'Montserrat', sans-serif;
+
+  /* YOUR BACKGROUND */
+  background: linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)),
               url('AF4BEE5E-BE90-47C1-A640-6523658D66D4.png');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: 'Montserrat', sans-serif;
+
+  color: #4a2c2a;
 }
 
+/* MAIN SECTION */
 .hero {
   min-height: 100vh;
-  padding: 45px 22px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 30px 20px;
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto; 
-  background: transparent;
-}
-.bismillah {
-  font-family: 'Playfair Display', serif;
-  color: var(--emerald);
-  letter-spacing: 1px;
-  font-size: 16px;
-  margin-bottom: 16px;
 }
 
+/* BISMILLAH */
+.bismillah img {
+  width: 240px;
+  margin-bottom: 20px;
+}
+
+/* WELCOME TEXT */
 .welcome {
   font-family: 'Great Vibes', cursive;
-  font-size: 44px;
-  color: var(--gold);
+  font-size: 30px;
+  color: #c9a24a;
   margin: 0;
 }
 
+/* NAMES */
 .names {
   font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  line-height: 1.2;
-  color: var(--burgundy);
-  margin: 22px 0;
+  font-size: 34px;
+  margin: 15px 0;
 }
 
 .amp {
-  font-family: 'Great Vibes', cursive;
-  color: var(--gold);
-  font-size: 48px;
+  font-size: 32px;
+  color: #c9a24a;
 }
 
+/* DATE */
 .date {
-  font-size: 15px;
+  font-size: 12px;
   letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--emerald);
-  margin-bottom: 30px;
+  color: #1f6b57;
+  margin-top: 10px;
 }
 
+/* COUNTDOWN */
 .countdown {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 10px;
-  max-width: 520px;
-  margin: 0 auto 35px;
+  margin-top: 25px;
 }
 
 .time-box {
-  background: white;
-  border: 1px solid rgba(201,162,74,0.45);
-  border-radius: 18px;
-  padding: 14px 8px;
-  box-shadow: 0 10px 25px rgba(111,29,43,0.12);
+  text-align: center;
 }
 
 .time-box span {
   display: block;
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--burgundy);
+  font-size: 26px;
+  font-weight: 600;
 }
 
 .time-box small {
   font-size: 10px;
-  text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--emerald);
 }
 
+/* CEREMONY (NO BOX STYLE) */
 .card {
-  max-width: 520px;
-  margin: 18px auto;
-  padding: 26px 22px;
-  background: rgba(255,255,255,0.88);
-  border-radius: 22px;
-  border: 1px solid rgba(201,162,74,0.45);
-  box-shadow: 0 14px 35px rgba(0,0,0,0.08);
+  margin-top: 40px;
+  text-align: center;
 }
 
 .card h2 {
   font-family: 'Playfair Display', serif;
-  color: var(--burgundy);
-  font-size: 28px;
-  margin-top: 0;
+  font-size: 26px;
 }
 
-.quote {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 20px;
-  color: var(--burgundy);
+.card p {
+  margin: 6px 0;
 }
 
-.button {
+/* BUTTON */
+.btn {
+  margin-top: 15px;
   display: inline-block;
-  margin-top: 14px;
-  padding: 13px 22px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--burgundy), var(--emerald));
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #7a2d2d, #1f6b57);
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  font-size: 14px;
 }
 
-.footer {
-  margin-top: 30px;
-  font-size: 13px;
-  color: #7b6d65;
-}
+/* MOBILE OPTIMISATION */
+@media (max-width: 600px) {
 
-@media (max-width: 480px) {
-  .names {
-    font-size: 34px;
+  .bismillah img {
+    width: 200px;
   }
 
   .welcome {
-    font-size: 38px;
+    font-size: 26px;
+  }
+
+  .names {
+    font-size: 28px;
+  }
+
+  .amp {
+    font-size: 28px;
+  }
+
+  .date {
+    font-size: 11px;
   }
 
   .countdown {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .time-box span {
+    font-size: 22px;
+  }
+
+  .card h2 {
+    font-size: 22px;
   }
 }
 </style>
@@ -179,71 +159,62 @@ body {
 <body>
 
 <section class="hero">
-<div class="bismillah">
-  <img src="IMG_1467.jpeg" alt="Bismillah">
-</div> 
-  
+
+  <!-- BISMILLAH -->
+  <div class="bismillah">
+    <img src="IMG_1467.jpeg">
+  </div>
+
+  <!-- TEXT -->
   <h1 class="welcome">Welcome to Syed’s Wedding</h1>
 
   <div class="names">
-    Syed Rakibul Hoque
-    <div class="amp">&</div>
+    Syed Rakibul Hoque<br>
+    <span class="amp">&</span><br>
     Minshana Muneer
   </div>
 
-  <p class="date">Sunday 28th June 2026 • 6:00 PM</p>
+  <p class="date">SUNDAY 28TH JUNE 2026 • 6:00 PM</p>
 
+  <!-- COUNTDOWN -->
   <div class="countdown">
-    <div class="time-box"><span id="days">0</span><small>Days</small></div>
-    <div class="time-box"><span id="hours">0</span><small>Hours</small></div>
-    <div class="time-box"><span id="minutes">0</span><small>Minutes</small></div>
-    <div class="time-box"><span id="seconds">0</span><small>Seconds</small></div>
+    <div class="time-box"><span id="days">0</span><small>DAYS</small></div>
+    <div class="time-box"><span id="hours">0</span><small>HOURS</small></div>
+    <div class="time-box"><span id="minutes">0</span><small>MINUTES</small></div>
+    <div class="time-box"><span id="seconds">0</span><small>SECONDS</small></div>
   </div>
 
+  <!-- CEREMONY -->
   <div class="card">
     <h2>Wedding Ceremony</h2>
     <p><strong>Imperial Banqueting</strong></p>
     <p>619 High Road, London, E11 4PA</p>
-    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Imperial+Banqueting+619+High+Road+E11+4PA" target="_blank">
-      Open Map
-    </a>
+    <a class="btn" href="https://maps.google.com" target="_blank">Open Map</a>
   </div>
 
-  <div class="card">
-    <p class="quote">“And We created you in pairs.”</p>
-    <p>— Qur’an 78:8</p>
-  </div>
-
-  <div class="card">
-    <h2>RSVP</h2>
-    <p>Kindly confirm your attendance</p>
-    <a class="button" href="tel:07456878912">07456 878912</a>
-  </div>
-
-  <p class="footer">We are honoured to celebrate this beautiful day with you.</p>
 </section>
 
+<!-- COUNTDOWN SCRIPT -->
 <script>
-const eventDate = new Date("June 28, 2026 18:00:00").getTime();
+const targetDate = new Date("June 28, 2026 18:00:00").getTime();
 
-function updateCountdown() {
+setInterval(() => {
   const now = new Date().getTime();
-  const distance = eventDate - now;
+  const diff = targetDate - now;
 
-  if (distance <= 0) {
-    document.querySelector(".countdown").innerHTML = "<h2>The celebration has begun</h2>";
-    return;
-  }
+  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const m = Math.floor((diff / (1000 * 60)) % 60);
+  const s = Math.floor((diff / 1000) % 60);
 
-  document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-  document.getElementById("hours").innerText = Math.floor((distance / (1000 * 60 * 60)) % 24);
-  document.getElementById("minutes").innerText = Math.floor((distance / (1000 * 60)) % 60);
-  document.getElementById("seconds").innerText = Math.floor((distance / 1000) % 60);
-}
+  document.getElementById("days").innerText = d;
+  document.getElementById("hours").innerText = h;
+  document.getElementById("minutes").innerText = m;
+  document.getElementById("seconds").innerText = s;
 
-updateCountdown();
-setInterval(updateCountdown, 1000);
+}, 1000);
 </script>
 
 </body>
 </html>
+ 
