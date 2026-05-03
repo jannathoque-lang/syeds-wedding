@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Syed’s Wedding</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 * { box-sizing: border-box; }
@@ -21,82 +21,80 @@ body {
   text-align: center;
 }
 
-/* main invitation */
 .hero {
   min-height: 100vh;
-  padding: 130px 18px 40px;
+  padding: 145px 18px 35px;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  flex-direction: column;
 }
 
-/* keeps text away from flowers */
-.hero-inner {
+.content {
   width: 100%;
-  max-width: 360px;
-  margin: 0 auto;
+  max-width: 350px;
+  background: rgba(255, 250, 242, 0.42);
+  padding: 18px 14px;
+  border-radius: 18px;
+  backdrop-filter: blur(1px);
 }
 
 .bismillah img {
-  width: 230px;
-  max-width: 86%;
-  margin-bottom: 18px;
+  width: 220px;
+  max-width: 85%;
+  margin-bottom: 12px;
   mix-blend-mode: multiply;
 }
 
 .invite-text {
   font-family: 'Playfair Display', serif;
-  font-size: 12px;
-  letter-spacing: 1.3px;
-  line-height: 1.75;
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  line-height: 1.7;
   text-transform: uppercase;
-  margin: 0 auto 12px;
 }
 
 .script-name {
   font-family: 'Great Vibes', cursive;
-  font-size: 46px;
+  font-size: 42px;
   color: #a7832f;
-  line-height: 1.05;
-  margin: 4px 0;
+  line-height: 1;
+  margin: 8px 0;
 }
 
 .divider {
   color: #a7832f;
-  font-size: 15px;
   margin: 8px 0;
 }
 
 .and {
   font-family: 'Playfair Display', serif;
-  font-size: 16px;
   color: #a7832f;
   letter-spacing: 3px;
   text-transform: uppercase;
+  font-size: 15px;
 }
 
 .bride-info {
   font-family: 'Playfair Display', serif;
-  font-size: 12px;
-  letter-spacing: 1.2px;
+  font-size: 11px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  margin-top: 7px;
 }
 
 .date {
   font-family: 'Playfair Display', serif;
   font-size: 15px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
-  line-height: 1.6;
-  margin-top: 8px;
+  line-height: 1.5;
 }
 
 .countdown {
   display: flex;
-  gap: 9px;
   justify-content: center;
-  margin-top: 17px;
+  gap: 8px;
+  margin-top: 14px;
 }
 
 .time-box span {
@@ -106,171 +104,154 @@ body {
 }
 
 .time-box small {
-  display: block;
-  font-size: 9px;
-  color: #6a4a32;
+  font-size: 8px;
   text-transform: uppercase;
 }
 
 .couple-img {
-  width: 155px;
+  width: 150px;
   max-width: 70%;
-  margin-top: 18px;
+  margin-top: 12px;
   opacity: 0;
-  transform: translateY(28px);
+  transform: translateY(25px);
   animation: fadeUp 1.5s ease forwards;
   animation-delay: 1s;
 }
 
 @keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* details */
-.details {
-  min-height: 100vh;
-  padding: 120px 20px 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.section {
+  padding: 55px 18px;
 }
 
-.details h2 {
+.section-inner {
+  max-width: 390px;
+  margin: 0 auto;
+  background: rgba(255, 250, 242, 0.72);
+  padding: 28px 22px;
+  border-radius: 18px;
+}
+
+h2 {
   font-family: 'Great Vibes', cursive;
   color: #a7832f;
   font-size: 42px;
   margin: 0 0 12px;
 }
 
-.details p {
-  margin: 5px 0;
-  font-size: 14px;
-}
+p { margin: 6px 0; }
 
 .btn {
+  display: inline-block;
   margin-top: 16px;
-  padding: 10px 24px;
+  padding: 11px 26px;
   border-radius: 999px;
   background: #a7832f;
   color: white;
   text-decoration: none;
   font-size: 13px;
-  display: inline-block;
 }
 
 .quote {
-  margin-top: 26px;
+  margin-top: 22px;
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 16px;
   line-height: 1.6;
 }
 
-/* RSVP section like your reference */
-.rsvp-section {
-  min-height: 100vh;
-  padding: 90px 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .rsvp-card {
-  width: 100%;
-  max-width: 430px;
-  background: rgba(255, 250, 242, 0.88);
-  border: 1px solid rgba(167, 131, 47, 0.25);
-  padding: 42px 30px;
+  max-width: 390px;
+  margin: 0 auto;
+  background: rgba(255, 250, 242, 0.86);
+  padding: 32px 24px;
+  border: 1px solid rgba(167, 131, 47, 0.35);
   box-shadow: 0 8px 25px rgba(90, 62, 43, 0.12);
 }
 
 .rsvp-card h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 38px;
   letter-spacing: 5px;
-  font-weight: 400;
-  margin: 0 0 10px;
+  font-size: 34px;
+  color: #2b1b1f;
 }
 
 .rsvp-card .small-title {
   color: #a7832f;
-  letter-spacing: 3px;
-  font-size: 11px;
-  text-transform: uppercase;
-  margin-bottom: 35px;
-}
-
-.rsvp-field {
-  text-align: left;
-  margin-bottom: 24px;
-}
-
-.rsvp-field label {
-  display: block;
-  color: #8b6b35;
-  font-size: 11px;
   letter-spacing: 2px;
+  font-size: 11px;
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: 25px;
 }
 
-.rsvp-line {
-  border-bottom: 1px solid rgba(167, 131, 47, 0.45);
-  padding: 10px 0;
-  font-size: 15px;
-}
-
-.rsvp-button {
+.rsvp-card label {
   display: block;
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #8b6b35;
+  margin: 16px 0 6px;
+}
+
+.rsvp-card input,
+.rsvp-card select {
   width: 100%;
-  margin-top: 30px;
+  padding: 12px 4px;
+  border: none;
+  border-bottom: 1px solid rgba(167, 131, 47, 0.55);
+  background: transparent;
+  font-size: 15px;
+  outline: none;
+}
+
+.rsvp-submit {
+  width: 100%;
+  margin-top: 28px;
   padding: 14px;
+  border: none;
   background: #a7832f;
   color: white;
-  text-decoration: none;
   letter-spacing: 3px;
   text-transform: uppercase;
   font-size: 12px;
+  cursor: pointer;
+}
+
+.phone-link {
+  display: block;
+  margin-top: 18px;
+  color: #a7832f;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 @media (max-width: 600px) {
   body {
+    background-size: cover;
     background-position: center top;
   }
 
   .hero {
-    padding-top: 155px;
+    padding-top: 135px;
   }
 
-  .hero-inner {
-    max-width: 320px;
+  .content {
+    max-width: 330px;
   }
 
   .bismillah img {
-    width: 215px;
-  }
-
-  .invite-text {
-    font-size: 10.5px;
+    width: 205px;
   }
 
   .script-name {
-    font-size: 40px;
+    font-size: 39px;
   }
 
-  .couple-img {
-    width: 145px;
-  }
-
-  .details {
-    padding-top: 130px;
-  }
-
-  .rsvp-card {
-    padding: 38px 24px;
+  .section {
+    padding: 45px 16px;
   }
 }
 </style>
@@ -279,7 +260,7 @@ body {
 <body>
 
 <section class="hero">
-  <div class="hero-inner">
+  <div class="content">
 
     <div class="bismillah">
       <img src="IMG_1467.jpeg" alt="Bismillah">
@@ -316,49 +297,47 @@ body {
   </div>
 </section>
 
-<section class="details">
-  <h2>Wedding Ceremony</h2>
+<section class="section">
+  <div class="section-inner">
+    <h2>Wedding Ceremony</h2>
 
-  <p><strong>The Imperial Venue</strong></p>
-  <p>619 High Road, Leytonstone</p>
-  <p>London E11 4PA</p>
-  <p>Sunday, 28th June 2026</p>
-  <p>6:00 PM</p>
+    <p><strong>The Imperial Venue</strong></p>
+    <p>619 High Road, Leytonstone</p>
+    <p>London E11 4PA</p>
+    <p>Sunday, 28th June 2026</p>
+    <p>6:00 PM</p>
 
-  <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Imperial+Banqueting+619+High+Road+E11+4PA" target="_blank">Open Map</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Imperial+Banqueting+619+High+Road+E11+4PA" target="_blank">Open Map</a>
 
-  <div class="quote">
-    “And We created you in pairs.”<br>
-    — Qur’an 78:8
+    <div class="quote">
+      “And We created you in pairs.”<br>
+      — Qur’an 78:8
+    </div>
   </div>
 </section>
 
-<section class="rsvp-section">
-  <div class="rsvp-card">
+<section class="section">
+  <form class="rsvp-card" onsubmit="sendRSVP(event)">
     <h2>RSVP</h2>
     <div class="small-title">Kindly respond as soon as possible</div>
 
-    <div class="rsvp-field">
-      <label>Full Name</label>
-      <div class="rsvp-line">________________________</div>
-    </div>
+    <label>Full Name</label>
+    <input id="guestName" type="text" required>
 
-    <div class="rsvp-field">
-      <label>Will you attend?</label>
-      <div class="rsvp-line">Please message your response</div>
-    </div>
+    <label>Will you attend?</label>
+    <select id="attending" required>
+      <option value="">Please select...</option>
+      <option value="Yes, I will attend">Yes, I will attend</option>
+      <option value="No, I cannot attend">No, I cannot attend</option>
+    </select>
 
-    <div class="rsvp-field">
-      <label>Family Members</label>
-      <div class="rsvp-line">Please include number of guests</div>
-    </div>
+    <label>Number of Family Members</label>
+    <input id="members" type="number" min="0" value="0" required>
 
-    <a class="rsvp-button" href="tel:07456878912">Call RSVP</a>
-    <br>
-    <a class="gold-link" href="tel:07456878912" style="color:#a7832f; text-decoration:none; font-weight:600;">
-      07456 878912
-    </a>
-  </div>
+    <button class="rsvp-submit" type="submit">Send RSVP</button>
+
+    <a class="phone-link" href="tel:07456878912">07456 878912</a>
+  </form>
 </section>
 
 <script>
@@ -377,6 +356,22 @@ function updateCountdown() {
   document.getElementById("hours").innerText = Math.floor((distance / (1000 * 60 * 60)) % 24);
   document.getElementById("minutes").innerText = Math.floor((distance / (1000 * 60)) % 60);
   document.getElementById("seconds").innerText = Math.floor((distance / 1000) % 60);
+}
+
+function sendRSVP(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("guestName").value;
+  const attending = document.getElementById("attending").value;
+  const members = document.getElementById("members").value;
+
+  const message =
+    "Wedding RSVP%0A%0A" +
+    "Name: " + encodeURIComponent(name) + "%0A" +
+    "Attendance: " + encodeURIComponent(attending) + "%0A" +
+    "Family Members: " + encodeURIComponent(members);
+
+  window.location.href = "https://wa.me/447456878912?text=" + message;
 }
 
 updateCountdown();
